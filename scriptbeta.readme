@@ -1,0 +1,32 @@
+if (username.value === "") {
+    showError(username, "Username is required");
+  } else {
+    showSuccess(username);
+  }
+
+  // The event listener above responds to the form when it's submitted. It listens for the 'submit', then it runs a fx.
+
+  // The e.preventDefault prevents the form from submitting so app has a chance to look over the info and validate.
+
+  // showError fx takes in username.value (the username input) and the message.
+
+  if (email.value === "") {
+    showError(email, "Email is required");
+  } else if (isValidEmail(email.value)) {
+    showError(email, "Email is not valid");
+  } else {
+    showSuccess(email);
+  }
+
+  if (password.value === "") {
+    showError(password, "Password is required");
+  } else {
+    showSuccess(password);
+  }
+
+  if (password2.value === "") {
+    showError(password2, "Password re-entry is required");
+  } else {
+    showSuccess(password2);
+  }
+});
